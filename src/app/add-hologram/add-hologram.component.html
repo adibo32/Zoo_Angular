@@ -1,0 +1,79 @@
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">hologram Hinzufügen</h4>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    ></button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="mb-3">
+        <div class="input-group">
+          <label for="name" class="form-control">Name</label>
+
+          <input
+            [(ngModel)]="name"
+            id="name"
+            class="form-control"
+            name="name"
+            type="text"
+          />
+        </div>
+      </div>
+      <div class="mb-3">
+        <div class="input-group">
+          <label for="gewicht" class="form-control">Gewicht</label>
+          <input
+            [(ngModel)]="gewicht"
+            id="gewicht"
+            class="form-control"
+            name="name"
+            type="text"
+          />
+        </div>
+      </div>
+      <div class="mb-3">
+        <div class="input-group">
+          <label for="superkraft" class="form-control">superkraft</label>
+
+          <input
+            [(ngModel)]="superkraft"
+            id="superkraft"
+            class="form-control"
+            name="superkraft"
+            type="text"
+          />
+        </div>
+      </div>
+      <div class="mb-3">
+        <div class="input-group">
+          <label for="ausgestorben_seit" class="form-control">ausgestorben_seit</label>
+
+          <input
+            [(ngModel)]="ausgestorben_seit"
+            id="ausgestorben_seit"
+            class="form-control"
+            name="ausgestorben_seit"
+            type="text"
+          />
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-outline-secondary"
+      (click)="modal.close(this.name, this.gewicht, this.superkraft, this.ausgestorben_seit)"
+    >
+      Speicheren
+    </button>
+  </div>
+</ng-template>
+
+<button class="btn btn-lg btn-outline-primary mt-1" (click)="open(content)">
+  + Hologramm Hinzufügen
+</button>

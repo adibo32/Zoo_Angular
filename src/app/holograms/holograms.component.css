@@ -1,0 +1,29 @@
+.bg-image {
+  background-image: url('https://wallpaperaccess.com/full/1286225.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  position: relative; /* Füge diese Zeile hinzu */
+  color: white; /* Setzt die Textfarbe auf weiß für bessere Lesbarkeit */
+}
+
+.bg-body-tertiary {
+  background-color: transparent; /* Macht den Hintergrund der Boxen transparent */
+  padding: 0; /* Entfernt zusätzliches Padding */
+  border-radius: 0; /* Entfernt abgerundete Ecken */
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.9); /* Macht die Boxen leicht transparent, sodass das Hintergrundbild durchscheint */
+  border: none; /* Optional: Entfernt die Border, falls vorhanden */
+}
+
+.card-body {
+  padding: 1rem; /* Fügt etwas Padding hinzu für bessere Lesbarkeit */
+}
+h1 {
+  color: #333; /* Dunkelgrau für besseren Kontrast */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Optional: Textschatten für besseren Kontrast */
+}

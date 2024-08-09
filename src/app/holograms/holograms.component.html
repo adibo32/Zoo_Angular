@@ -1,0 +1,27 @@
+<div class="container-fluid bg-image">
+  <div class="row">
+    <div class="col-md-9 mt-1 my-3">
+      <h1>Zoo Hologramm</h1>
+    </div>
+    <div class="col-md-3">
+      <ngbd-modal-add-hologram [add]="addHologram"></ngbd-modal-add-hologram>
+    </div>
+  </div>
+
+  <div class="row mb-3 p-4">
+    <div *ngFor="let hologram of holograms" class="col-md-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{hologram.name}}</h5>
+          <p class="card-text"><strong>Name:</strong> {{hologram.name}}</p>
+          <p class="card-text"><strong>Gewicht:</strong> {{hologram.gewicht}}</p>
+          <p class="card-text"><strong>Superkraft:</strong> {{hologram.superkraft}}</p>
+          <p class="card-text"><strong>Ausgestorben Seit:</strong> {{hologram.ausgestorben_seit}}</p>
+          <br />
+          <ngbd-modal-edit-hologram [selected]="hologram" [update]="updateHologram"></ngbd-modal-edit-hologram>
+          <ngbd-modal-delete-hologram [hologramToDelete]="hologram" [delete]="deleteHologram"></ngbd-modal-delete-hologram>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
