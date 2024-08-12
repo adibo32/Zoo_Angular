@@ -7,9 +7,27 @@
       <ngbd-modal-add-hologram [add]="addHologram"></ngbd-modal-add-hologram>
     </div>
   </div>
-
+  <div class="row mb-3 align-items-center">
+    <div class="col-md-4">
+      <input [(ngModel)]="filterTerm" class="form-control form-control-sm" placeholder="Filter nach Namen..." />
+    </div>
+    <div class="col-md-4">
+      <select [(ngModel)]="sortColumn" class="form-control form-control-sm">
+        <option value="name">Name</option>
+        <option value="gewicht">Gewicht</option>
+        <option value="superkraft">Superkraft</option>
+        <option value="ausgestorben_seit">Ausgestorben Seit</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <select [(ngModel)]="sortOrder" class="form-control form-control-sm">
+        <option value="asc">Aufsteigend</option>
+        <option value="desc">Absteigend</option>
+      </select>
+    </div>
+  </div>
   <div class="row mb-3 p-4">
-    <div *ngFor="let hologram of holograms" class="col-md-3">
+    <div *ngFor="let hologram of filteredAndSortedHolograms()" class="col-md-3">
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">{{hologram.name}}</h5>
@@ -20,6 +38,7 @@
           <br />
           <ngbd-modal-edit-hologram [selected]="hologram" [update]="updateHologram"></ngbd-modal-edit-hologram>
           <ngbd-modal-delete-hologram [hologramToDelete]="hologram" [delete]="deleteHologram"></ngbd-modal-delete-hologram>
+          <app-notification></app-notification>
         </div>
       </div>
     </div>

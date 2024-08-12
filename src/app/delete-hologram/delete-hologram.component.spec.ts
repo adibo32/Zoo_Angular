@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DeleteHologramComponent } from './delete-hologram.component';
+import { NgbdModalDeleteHologram } from './delete-hologram.component';
 
 describe('DeleteHologramComponent', () => {
-  let component: DeleteHologramComponent;
-  let fixture: ComponentFixture<DeleteHologramComponent>;
+  let component: NgbdModalDeleteHologram;
+  let fixture: ComponentFixture<NgbdModalDeleteHologram>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [DeleteHologramComponent]
+      imports: [NgbdModalDeleteHologram]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(DeleteHologramComponent);
+    fixture = TestBed.createComponent(NgbdModalDeleteHologram);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

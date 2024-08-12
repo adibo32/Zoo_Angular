@@ -15,10 +15,8 @@ export class BackendService {
   }
 
   getHolograms(type: Type<any>): Promise<Hologram[]> {
-    if (type === Hologram) {
       return Promise.resolve<Hologram[]>(this.Holograms);
-    }
-    return Promise.reject(new Error('Cannot get object of this type'));
+
   }
 
   updateHologram(id: number, name: string, gewicht: string, superkraft: string, ausgestorben_seit: string): void {
