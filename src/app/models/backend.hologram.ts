@@ -2,8 +2,8 @@ import { Injectable, Type } from "@angular/core";
 import { Hologram } from "../models/hologram";
 
 const Holograms: Hologram[] = [
-  new Hologram('Test 1', '100kg', 'Fliegen', '2020'),
-  new Hologram('Test 2', '200kg', 'Unsichtbarkeit', '2022'),
+  new Hologram('Wanderfalke', '100kg', 'Fliegen', '2020'),
+  new Hologram('Mauersegler', '200kg', 'Leben in der Luft', '2022'),
 ];
 
 @Injectable({ providedIn: 'root' })

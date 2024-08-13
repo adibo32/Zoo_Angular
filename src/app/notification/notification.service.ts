@@ -10,7 +10,7 @@ export class NotificationService {
     this.messageSubject.next(message);
     setTimeout(() => {
       this.messageSubject.next(null);
-    }, 3000);  // Nachricht wird nach 3 Sekunden ausgeblendet
+    }, 3000);
   }
 }
 

@@ -28,7 +28,6 @@ export class NgbdModalAddhologram {
       .open(content, { ariaLabelledBy: 'modal-basic-title' })
       .result.then(
         () => {
-          this.closeResult = `Ihre Bewertung: : ${this.name} ${this.gewicht}${this.superkraft}${this.ausgestorben_seit}`;
           this.add(this.name, this.gewicht, this.superkraft, this.ausgestorben_seit);
         },
         (reason) => {

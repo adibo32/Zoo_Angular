@@ -36,8 +36,6 @@ export class NgbdModalEditHologram {
         () => {
           if (this.selected) {
             this.update(this.selected.id, this.name, this.gewicht, this.superkraft, this.ausgestorben_seit);
-          } else {
-            this.update(this.name, this.gewicht, this.superkraft, this.ausgestorben_seit);
           }
           this.resetForm();
         },
